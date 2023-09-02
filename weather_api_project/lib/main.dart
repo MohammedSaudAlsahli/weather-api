@@ -24,19 +24,3 @@ class MainApp extends StatelessWidget {
         ));
   }
 }
-
-// FutureBuilder<WeatherApiModel>(
-//   future: WeatherApi().getData("Riyadh"),
-//   builder: (BuildContext context, AsyncSnapshot snapshot) {
-//     if (snapshot.connectionState == ConnectionState.waiting) {
-//       return const Center(
-//         child: CircularProgressIndicator(),
-//       );
-//     } else if (snapshot.connectionState == ConnectionState.done) {
-//       final weather = snapshot.data;
-//       return WeatherScreen(weather: weather);
-//     } else {
-//       return const Text('Error');
-//     }
-//   },
-// ),
