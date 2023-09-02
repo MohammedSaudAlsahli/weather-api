@@ -13,15 +13,22 @@ class WeatherScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff2d3340),
+      backgroundColor: weather!.current!.isDay == 1
+          ? Colors.yellow[100]
+          : const Color(0xff2d3340),
       appBar: AppBar(
+        foregroundColor:
+            weather!.current!.isDay == 1 ? Colors.black : Colors.white,
         title: Text(
           '${weather!.location!.country}',
           style: GoogleFonts.rubik(
-            fontWeight: FontWeight.bold,
-          ),
+              fontWeight: FontWeight.bold,
+              color:
+                  weather!.current!.isDay == 1 ? Colors.black : Colors.white),
         ),
-        backgroundColor: const Color(0xff2d3340),
+        backgroundColor: weather!.current!.isDay == 1
+            ? Colors.yellow[100]
+            : const Color(0xff2d3340),
         elevation: 0,
       ),
       body: Center(
@@ -39,7 +46,9 @@ class WeatherScreen extends StatelessWidget {
               style: GoogleFonts.rubik(
                   fontSize: 80,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: weather!.current!.isDay == 1
+                      ? Colors.black
+                      : Colors.white),
             ),
             const SizedBox(
               height: 10,
@@ -47,7 +56,9 @@ class WeatherScreen extends StatelessWidget {
             Text(
               '${weather!.location!.name}',
               style: GoogleFonts.rubik(
-                  color: Colors.white,
+                  color: weather!.current!.isDay == 1
+                      ? Colors.black
+                      : Colors.white,
                   fontWeight: FontWeight.w300,
                   fontSize: 30),
             ),
@@ -57,7 +68,9 @@ class WeatherScreen extends StatelessWidget {
             Text(
               "${weather!.location!.localtime}",
               style: GoogleFonts.rubik(
-                  color: Colors.white,
+                  color: weather!.current!.isDay == 1
+                      ? Colors.black
+                      : Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 14),
             ),
@@ -73,7 +86,9 @@ class WeatherScreen extends StatelessWidget {
                 Text(
                   "${weather!.current!.condition!.text}",
                   style: GoogleFonts.rubik(
-                      color: Colors.white,
+                      color: weather!.current!.isDay == 1
+                          ? Colors.black
+                          : Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 14),
                 ),
