@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_api_project/data/api_model.dart';
 
 class WeatherScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class WeatherScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           '${weather!.location!.country}',
-          style: const TextStyle(
+          style: GoogleFonts.rubik(
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -35,7 +36,7 @@ class WeatherScreen extends StatelessWidget {
             ),
             Text(
               '${weather!.current!.tempC}',
-              style: const TextStyle(
+              style: GoogleFonts.rubik(
                   fontSize: 80,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
@@ -45,7 +46,7 @@ class WeatherScreen extends StatelessWidget {
             ),
             Text(
               '${weather!.location!.name}',
-              style: const TextStyle(
+              style: GoogleFonts.rubik(
                   color: Colors.white,
                   fontWeight: FontWeight.w300,
                   fontSize: 30),
@@ -54,8 +55,8 @@ class WeatherScreen extends StatelessWidget {
               height: 20,
             ),
             Text(
-              "${DateTime.parse('${weather!.location!.localtime}').hour}:${DateTime.parse('${weather!.location!.localtime}').minute}",
-              style: const TextStyle(
+              "${weather!.location!.localtime}",
+              style: GoogleFonts.rubik(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 14),
@@ -71,7 +72,7 @@ class WeatherScreen extends StatelessWidget {
                 ),
                 Text(
                   "${weather!.current!.condition!.text}",
-                  style: const TextStyle(
+                  style: GoogleFonts.rubik(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 14),

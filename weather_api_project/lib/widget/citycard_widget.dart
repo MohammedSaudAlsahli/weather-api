@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_api_project/data/api_model.dart';
 import 'package:weather_api_project/screens/weather_screen.dart';
 
@@ -27,8 +27,8 @@ class CityCard extends StatelessWidget {
         width: 600,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            const BoxShadow(
+          boxShadow: const [
+            BoxShadow(
               color: Colors.grey,
               offset: Offset(0.0, 2.0),
               blurRadius: 20.0,
@@ -48,7 +48,7 @@ class CityCard extends StatelessWidget {
                 children: [
                   Text(
                     '${weather!.location!.name}',
-                    style: TextStyle(
+                    style: GoogleFonts.rubik(
                         fontWeight: FontWeight.w700,
                         fontSize: 30,
                         color: weather!.current!.isDay == 1
@@ -58,7 +58,7 @@ class CityCard extends StatelessWidget {
                   const Spacer(),
                   Text(
                     '${weather!.current!.tempC}',
-                    style: TextStyle(
+                    style: GoogleFonts.rubik(
                         fontWeight: FontWeight.w700,
                         fontSize: 30,
                         color: weather!.current!.isDay == 1
@@ -68,8 +68,9 @@ class CityCard extends StatelessWidget {
                 ],
               ),
               Text(
-                "${DateTime.parse('${weather!.location!.localtime}').hour}:${DateTime.parse('${weather!.location!.localtime}').minute}",
-                style: TextStyle(
+                "${weather!.location!.localtime}",
+                // "${DateTime.parse('${weather!.location!.localtime}').hour}:${DateTime.parse('${weather!.location!.localtime}').minute}",
+                style: GoogleFonts.rubik(
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
                     color: weather!.current!.isDay == 1
@@ -79,7 +80,7 @@ class CityCard extends StatelessWidget {
               const Spacer(),
               Text(
                 "${weather!.current!.condition!.text}",
-                style: TextStyle(
+                style: GoogleFonts.rubik(
                     fontWeight: FontWeight.w700,
                     fontSize: 20,
                     color: weather!.current!.isDay == 1

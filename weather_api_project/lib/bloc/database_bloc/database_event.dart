@@ -4,8 +4,8 @@ abstract class DatabaseEvent {}
 
 class GetDatabaseEvent extends DatabaseEvent {}
 
-// class AddDatabaseEvent extends DatabaseEvent {
-//   final String city;
+class AddDatabaseEvent extends DatabaseEvent {
+  final String city;
 
-//   AddDatabaseEvent(this.city);
-// }
+  AddDatabaseEvent(this.city);
+}

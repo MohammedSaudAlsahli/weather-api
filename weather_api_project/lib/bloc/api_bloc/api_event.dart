@@ -1,4 +1,4 @@
-part of 'api_bloc.dart';
+// part of 'api_bloc.dart';
 
-@immutable
-sealed class ApiBlocEvent {}
+// @immutable
+// sealed class ApiBlocEvent {}

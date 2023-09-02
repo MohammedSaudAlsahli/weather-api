@@ -1,6 +1,6 @@
-part of 'api_bloc.dart';
+// part of 'api_bloc.dart';
 
-@immutable
-sealed class ApiBlocState {}
+// @immutable
+// sealed class ApiBlocState {}
 
-final class ApiBlocInitial extends ApiBlocState {}
+// final class ApiBlocInitial extends ApiBlocState {}

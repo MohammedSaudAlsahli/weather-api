@@ -12,6 +12,8 @@ final class GetDatabaseSuccessedstate extends DatabaseState {
   GetDatabaseSuccessedstate({required this.weatherApiModel});
 }
 
+final class AddDatabaseSuccessedstate extends DatabaseState {}
+
 final class FailedState extends DatabaseState {}
 
 final class LoadingState extends DatabaseState {}

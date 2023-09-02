@@ -9,6 +9,9 @@ Future getCities() async {
   for (final city in citiesList) {
     cities.add(await getData(city["city_name"]));
   }
-  print(cities);
   return cities;
+}
+
+Future addCity(String name) async {
+  await Supabase.instance.client.from("SavedCity").insert({"city_name": name});
 }
