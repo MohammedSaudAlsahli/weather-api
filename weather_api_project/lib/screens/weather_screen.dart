@@ -23,6 +23,7 @@ class WeatherScreen extends StatelessWidget {
           '${weather!.location!.country}',
           style: GoogleFonts.rubik(
               fontWeight: FontWeight.bold,
+              fontSize: 28,
               color:
                   weather!.current!.isDay == 1 ? Colors.black : Colors.white),
         ),

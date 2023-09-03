@@ -78,14 +78,27 @@ class CityCard extends StatelessWidget {
                         : Colors.white),
               ),
               const Spacer(),
-              Text(
-                "${weather!.current!.condition!.text}",
-                style: GoogleFonts.rubik(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20,
-                    color: weather!.current!.isDay == 1
-                        ? Colors.black
-                        : Colors.white),
+              Row(
+                children: [
+                  Image.network(
+                    'https:${weather!.current!.condition!.icon}',
+                    height: 40,
+                    width: 40,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "${weather!.current!.condition!.text}",
+                    style: GoogleFonts.rubik(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: weather!.current!.isDay == 1
+                            ? Colors.black
+                            : Colors.white),
+                  ),
+                ],
               )
             ],
           ),

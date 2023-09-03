@@ -7,6 +7,7 @@ Future<WeatherApiModel> getData(String query) async {
   final request = await http.get(
     Uri.parse('http://api.weatherapi.com/v1/current.json?$key=$query'),
   );
+
   final jsonDecode = json.decode(request.body);
   final result = WeatherApiModel.fromJson(jsonDecode);
   return result;

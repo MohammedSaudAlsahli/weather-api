@@ -17,10 +17,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
         home: BlocProvider(
-          create: (context) => DatabaseBloc(),
-          child: const HomeScreen(),
-        ));
+      create: (context) => DatabaseBloc(),
+      child: const HomeScreen(),
+    ));
   }
 }

@@ -15,6 +15,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     context.read<DatabaseBloc>().add(GetDatabaseEvent());
     return Scaffold(
+        appBar: AppBar(
+          foregroundColor: Colors.white,
+          title: Text('Weather',
+              style: GoogleFonts.rubik(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                  fontSize: 28)),
+          backgroundColor: const Color(0xff2d3340),
+          elevation: 0,
+        ),
         backgroundColor: const Color(0xff2d3340),
         body: SafeArea(
           child: Column(
@@ -55,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                     child: Center(
                       child: LoadingAnimationWidget.discreteCircle(
                           color: Colors.white,
-                          size: 100,
+                          size: 70,
                           secondRingColor: Colors.black,
                           thirdRingColor: Colors.pinkAccent),
                     ),
